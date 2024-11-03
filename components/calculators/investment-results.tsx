@@ -8,10 +8,9 @@ import { ArrowLeft } from "lucide-react";
 
 interface InvestmentResultsProps {
   result: CalculationResult;
-  onBack: () => void;
 }
 
-export function InvestmentResults({ result, onBack }: InvestmentResultsProps) {
+export function InvestmentResults({ result }: InvestmentResultsProps) {
   const formatter = new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
@@ -63,15 +62,6 @@ export function InvestmentResults({ result, onBack }: InvestmentResultsProps) {
 
   return (
     <div className="space-y-4">
-      <Button
-        variant="ghost"
-        onClick={onBack}
-        className="flex items-center gap-2"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        Back to Calculator
-      </Button>
-
       <Card>
         <CardHeader>
           <CardTitle>Investment Summary</CardTitle>

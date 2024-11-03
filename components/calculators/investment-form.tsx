@@ -31,11 +31,11 @@ const compoundOptions = [
 export function InvestmentForm() {
   const [result, setResult] = useState<CalculationResult | null>(null);
   const [inputs, setInputs] = useState<InvestmentCalculatorInputs>({
-    startingAmount: 10000,
-    years: 10,
-    rate: 7,
+    startingAmount: 1000000,
+    years: 5,
+    rate: 6,
     compoundFrequency: "annually",
-    additionalContribution: 100,
+    additionalContribution: 1000000,
     contributionTiming: "end",
     contributionFrequency: "monthly",
   });
